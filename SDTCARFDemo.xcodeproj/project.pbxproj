@@ -6,6 +6,11 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		7CF56F1B2D23615E009E6477 /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = 7CF56F1A2D23615E009E6477 /* ComposableArchitecture */; };
+		7CF56F1E2D236F8F009E6477 /* Logging in Frameworks */ = {isa = PBXBuildFile; productRef = 7CF56F1D2D236F8F009E6477 /* Logging */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		7CF56EDF2D23273F009E6477 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -29,9 +34,22 @@
 		7CF56EE82D23273F009E6477 /* SDTCARFDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SDTCARFDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		7CF56F0A2D23341A009E6477 /* Exceptions for "SDTCARFDemo" folder in "SDTCARFDemo" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 7CF56ECC2D23273D009E6477 /* SDTCARFDemo */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		7CF56ECF2D23273D009E6477 /* SDTCARFDemo */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				7CF56F0A2D23341A009E6477 /* Exceptions for "SDTCARFDemo" folder in "SDTCARFDemo" target */,
+			);
 			path = SDTCARFDemo;
 			sourceTree = "<group>";
 		};
@@ -52,6 +70,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7CF56F1E2D236F8F009E6477 /* Logging in Frameworks */,
+				7CF56F1B2D23615E009E6477 /* ComposableArchitecture in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -112,6 +132,8 @@
 			);
 			name = SDTCARFDemo;
 			packageProductDependencies = (
+				7CF56F1A2D23615E009E6477 /* ComposableArchitecture */,
+				7CF56F1D2D236F8F009E6477 /* Logging */,
 			);
 			productName = SDTCARFDemo;
 			productReference = 7CF56ECD2D23273D009E6477 /* SDTCARFDemo.app */;
@@ -195,6 +217,10 @@
 			);
 			mainGroup = 7CF56EC42D23273D009E6477;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				7CF56F192D23615E009E6477 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */,
+				7CF56F1C2D236F8F009E6477 /* XCRemoteSwiftPackageReference "swift-log" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 7CF56ECE2D23273D009E6477 /* Products */;
 			projectDirPath = "";
@@ -401,7 +427,9 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SDTCARFDemo/Info.plist;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_UISupportsDocumentBrowser = YES;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
@@ -428,7 +456,9 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SDTCARFDemo/Info.plist;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_UISupportsDocumentBrowser = YES;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
@@ -549,6 +579,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		7CF56F192D23615E009E6477 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/pointfreeco/swift-composable-architecture";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.17.0;
+			};
+		};
+		7CF56F1C2D236F8F009E6477 /* XCRemoteSwiftPackageReference "swift-log" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "http://github.com/apple/swift-log";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.6.2;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		7CF56F1A2D23615E009E6477 /* ComposableArchitecture */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7CF56F192D23615E009E6477 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */;
+			productName = ComposableArchitecture;
+		};
+		7CF56F1D2D236F8F009E6477 /* Logging */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7CF56F1C2D236F8F009E6477 /* XCRemoteSwiftPackageReference "swift-log" */;
+			productName = Logging;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 7CF56EC52D23273D009E6477 /* Project object */;
 }
